@@ -6,7 +6,7 @@ var style = document.querySelector("#style");
 const changeBackground = () => {
   body.style.background =
     "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
-  style.textContent = body.style.background;
+  style.textContent = "background: " + body.style.background + ";";
 };
 
 addEventListener("DOMContentLoaded", changeBackground);
@@ -36,7 +36,7 @@ const randomizeColor = () => {
   body.style.background =
     "linear-gradient(to right, " + col1 + ", " + col2 + ")";
   let style = document.querySelector("#style");
-  style.textContent = body.style.background;
+  style.textContent = "background: " + body.style.background + ";";
 };
 
 function copyCss() {
