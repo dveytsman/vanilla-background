@@ -36,6 +36,9 @@ const randomizeColor = () => {
   color2.value = rgbToHex(r1, g1, b1);
   body.style.background =
     "linear-gradient(to right, " + col1 + ", " + col2 + ")";
+  let style = document.querySelector("#style");
+  console.log(style);
+  style.textContent = body.style.background;
 };
 
 function copyCss() {
