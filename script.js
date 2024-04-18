@@ -38,7 +38,7 @@ const randomizeColor = () => {
     "linear-gradient(to right, " + col1 + ", " + col2 + ")";
 };
 
-function myFunction() {
+function copyCss() {
   // Get the text field
   var copyText = document.getElementById("style");
   // Select the h3 element
