@@ -37,3 +37,34 @@ const randomizeColor = () => {
   body.style.background =
     "linear-gradient(to right, " + col1 + ", " + col2 + ")";
 };
+
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("style");
+  // Select the h3 element
+  const h3Element = document.querySelector("h3");
+
+  // Retrieve the text content of the h3 element
+  const textToCopy = h3Element.textContent;
+
+  // Use the Clipboard API if available
+  if (navigator.clipboard) {
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        console.log("Text copied successfully");
+      })
+      .catch((error) => {
+        console.error("Unable to copy text: ", error);
+      });
+  } else {
+    // Fallback method for browsers that don't support Clipboard API
+    const textArea = document.createElement("textarea");
+    textArea.value = textToCopy;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+    console.log("Text copied successfully");
+  }
+}
