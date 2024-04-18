@@ -23,7 +23,6 @@ function rgbToHex(r, g, b) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 const randomizeColor = () => {
-  console.log("randomizing");
   let r = Math.ceil(Math.random() * 255);
   let g = Math.ceil(Math.random() * 255);
   let b = Math.ceil(Math.random() * 255);
@@ -37,7 +36,6 @@ const randomizeColor = () => {
   body.style.background =
     "linear-gradient(to right, " + col1 + ", " + col2 + ")";
   let style = document.querySelector("#style");
-  console.log(style);
   style.textContent = body.style.background;
 };
 
